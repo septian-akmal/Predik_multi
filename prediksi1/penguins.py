@@ -45,7 +45,7 @@ def app():
 
     # Menggabungkan fitur input pengguna dengan seluruh kumpulan data penguin
     # Ini akan berguna untuk fase pengkodean
-    penguins_raw = pd.read_csv('penguins_cleaned.csv')
+    penguins_raw = pd.read_csv('prediksi1/penguins_cleaned.csv')
     penguins = penguins_raw.drop(columns=['species'])
     df = pd.concat([input_df,penguins],axis=0)
 
@@ -68,7 +68,7 @@ def app():
         st.write(df)
 
     # Dibaca dalam model klasifikasi tersimpan
-    load_clf = pickle.load(open('penguins_clf.pkl', 'rb'))
+    load_clf = pickle.load(open('prediksi1/penguins_clf.pkl', 'rb'))
 
     # Terapkan model untuk membuat prediksi
     prediction = load_clf.predict(df)
