@@ -12,12 +12,12 @@ from PIL import Image
 ######################
 
 def app():
-  #image = Image.open('dna_my.jpg')
+  image = Image.open('part_dna/dna_my.jpg')
 
-  #st.image(image, use_column_width=True)
+  st.image(image, use_column_width=True)
 
   st.write("""
-  # Aplikasi AMOGUS DNA
+  # Aplikasi SUS DNA
 
 
   Aplikasi ini menghitung komposisi nukleotida DNA dengan menggunakan kueri!
